@@ -1,0 +1,16 @@
+# Flutter
+.dart_tool/
+build/
+
+# Platform generated
+**/flutter/ephemeral/
+ios/Pods/
+ios/.symlinks/
+
+# IDE
+.idea/
+*.iml
+
+# Misc
+.metadata
+.flutter-plugins-dependencies
