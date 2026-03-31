@@ -4,7 +4,7 @@ workflows:
 
     environment:
       distribution_type: app_store
-      bundle_identifier: com.codemagic.salam
+      bundle_identifier: com.aajintech.calculator
 
     scripts:
       - name: Get flutter packages, please.
