@@ -6,9 +6,14 @@ workflows:
       xcode: latest
       flutter: stable
 
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: com.aajintech.calculator
+
     scripts:
-      - name: XCode, please use my profiles :)
-        script: xcode-project use-profiles
+      - script: keychain initialize
+      - script: keychain add-certificates
+      - script: xcode-project use-profiles
 
       - name: Get flutter packages, please.
         script: flutter pub get
