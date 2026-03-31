@@ -5,8 +5,9 @@ workflows:
     environment:
       flutter: stable
       xcode: latest
-      distribution_type: app_store
-      bundle_identifier: com.aajintech.calculator
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: com.aajintech.calculator
 
     scripts:
       - name: Get flutter packages, please.
@@ -17,3 +18,8 @@ workflows:
 
     artifacts:
       - build/ios/ipa/*.ipa
+
+    publishing:
+      app_store_connect:
+        auth: integration
+        submit_to_testflight: true
