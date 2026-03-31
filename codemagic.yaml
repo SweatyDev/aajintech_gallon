@@ -1,7 +1,6 @@
 workflows:
   ios-please-work-for-the-love-of-god:
     name: iOS signing, please
-    environment:
 
     scripts:
       - name: XCode, please use my profiles :)
