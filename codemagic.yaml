@@ -3,13 +3,17 @@ workflows:
     name: Put it on iOS NOW!!!
 
     environment:
+      flutter: stable
+      xcode: latest
       distribution_type: app_store
       bundle_identifier: com.aajintech.calculator
 
     scripts:
       - name: Get flutter packages, please.
-        script: flutter packages pub get
+        script: flutter pub get
+
       - name: Build iOS, pretty please.
         script: flutter build ipa
 
-    artifacts: build/ios/ipa/*.ipa
+    artifacts:
+      - build/ios/ipa/*.ipa
