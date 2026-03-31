@@ -2,6 +2,10 @@ workflows:
   ios-please-work-for-the-love-of-god:
     name: iOS signing, please
 
+    environment:
+      xcode: latest
+      flutter: stable
+
     scripts:
       - name: XCode, please use my profiles :)
         script: xcode-project use-profiles
