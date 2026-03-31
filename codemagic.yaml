@@ -5,6 +5,9 @@ workflows:
     integrations:
       app_store_connect: Codemagic API
 
+    ios_signing:
+      certificate: Apple_Certificate
+
     environment:
       flutter: stable
       xcode: latest
