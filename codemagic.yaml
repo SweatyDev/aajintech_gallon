@@ -1,20 +1,28 @@
 workflows:
-  ios-please-work-for-the-love-of-god:
-    name: iOS signing, please
+  ios-please-work:
+    name: Put it on iOS NOW!!!
+
+    integrations:
+      app_store_connect: Codemagic API
 
     environment:
-      xcode: latest
       flutter: stable
+      xcode: latest
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: com.aajintech.calculator
 
     scripts:
-      - name: XCode, please use my profiles :)
-        script: xcode-project use-profiles
-
-      - name: Get flutter packages, please.
+      - name: Get Flutter packages
         script: flutter pub get
 
-      - name: Build iOS, pretty please.
-        script: flutter build ipa
+      - name: Build IPA for App Store
+        script: flutter build ipa --release
 
     artifacts:
       - build/ios/ipa/*.ipa
+
+    publishing:
+      app_store_connect:
+        auth: integration
+        submit_to_testflight: true
