@@ -2,6 +2,9 @@ workflows:
   ios-please-work:
     name: Put it on iOS NOW!!!
 
+    integrations:
+      app_store_connect: Codemagic API
+
     environment:
       flutter: stable
       xcode: latest
