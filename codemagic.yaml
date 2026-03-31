@@ -8,9 +8,6 @@ workflows:
     environment:
       flutter: stable
       xcode: latest
-      ios_signing:
-        distribution_type: development
-        bundle_identifier: com.aajintech.calculator
 
     scripts:
       - name: Get flutter packages, please.
