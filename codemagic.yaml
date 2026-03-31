@@ -1,14 +1,13 @@
 workflows:
-  ios:
+  please-work:
+    name: Push to iOS!
+
     environment:
+      flutter: stable
       xcode: latest
 
     scripts:
-      - name: Build IPA
-        script: |
-          xcode-project build-ipa \
-            --workspace "ios/Runner.xcworkspace" \
-            --scheme "Runner"
-
-    artifacts:
-      - build/ios/ipa/*.ipa
+      - name: Get flutter packages, please.
+        script: flutter packages pub get
+      - name: Build iOS, pretty please.
+        script: flutter build ios
